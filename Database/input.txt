@@ -1,0 +1,7 @@
+var Fra = ['Wie geht es dir', 'Mir geht es auch gut', 'Wer hat dich programmiert'];
+var Ant = ['Mir geht es gut und dir?', 'Das ist gut.', 'Leon hat mich programmiert.']
+
+
+function hallo() {
+document.getElementById("ABC").innerHTML = "Funktion Input Test";
+}
