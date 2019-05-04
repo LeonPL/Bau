@@ -15,9 +15,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
     <title>Hello, world!</title>
   </head>
-  <body onload="connect()">
-
-
+  <body>
 
 
 
@@ -35,77 +33,58 @@
   </table>
 </div>
 
-<!-- Large modal -->
-<!-- Button trigger modal -->
-
-
-<!-- Modal -->
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Projektname</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
         </button>
-      </div>
-      <div class="modal-body">
 
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroup-sizing-default">Name des Projekts</span>
-          </div>
-          <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="pname">
+        <!-- Modal -->
+        <form class="server" action="server.php" method="POST">
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
 
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="nm">Full Name</label>
+            <input type="text" class="form-control" name="nm" aria-describedby="emailHelp" placeholder="Max Mustermann">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" onclick="save(),pview()">Save</button>
-      </div>
-    </div>
-  </div>
+          <div class="form-group">
+            <label for="em">Email</label>
+            <input type="email" class="form-control" name="em"  placeholder="Max.Mustermann@gmail.com">
+          </div>
+
+          <div class="form-group">
+            <label for="hp">Deutsch</label>
+            <input type="number" class="form-control" name="hp" placeholder="1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" value="submit" id="b1" class="btn btn-primary">Save changes</button>
+        </div>
+
+        </div>
+        </div>
+        </div>
+        </div>
+        </form>
+
 </div>
-
-<p id="ppview"></p>
-    <table class="table table-striped" >
-    <thead>
-    <tr>
-    <th scope="col">#</th>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Handle</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <th scope="row">1</th>
-    <td>Mark</td>
-    <td>Otto</td>
-    <td>@mdo</td>
-    </tr>
-    <tr>
-    <th scope="row">2</th>
-    <td>Jacob</td>
-    <td>Thornton</td>
-    <td>@fat</td>
-    </tr>
-    <tr>
-    <th scope="row">3</th>
-    <td>Larry</td>
-    <td>the Bird</td>
-    <td>@twitter</td>
-    </tr>
-    </tbody>
-    </table>
-  </div>
-
-
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
